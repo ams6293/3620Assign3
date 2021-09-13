@@ -1,15 +1,12 @@
 
 
 def Discount10Percent(price):
-    return price - (price * .10)
+    return (price * 0.10)
 
 
 def Discount5Percent(price):
-    return price - (price * .5)
+    return (price * 0.05)
 
 
-def BothDiscounts(Discount10, Discount5, arg):
-    return Discount10(Discount5(arg))
-
-
-print(BothDiscounts(Discount10Percent, Discount5Percent, 100))
+price = float(input("Enter in the starting price: "))
+print(round(price - Discount10Percent(price) - Discount5Percent(price), 2))
